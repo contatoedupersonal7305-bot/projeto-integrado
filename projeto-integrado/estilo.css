@@ -8,15 +8,14 @@
     display: flex;
     flex-direction: column;
     align-items: start;   
-    min-height: 100vh;      
+    min-height: 50vh;      
     background-color: #BFDDF3;
     padding: 20px;
     gap: 50px;
 }
 
 .tela1 img {
-    max-width: 200px;
-    width: 100%;
+    width: 200px;
     height: auto;
     border-radius: 16px;
 }
@@ -48,4 +47,31 @@
 
 .botao1:hover{
     background-color: #134e70;
+}
+
+/* Estilo para a segunda tela */
+
+.tela2 img {
+    width: 350px;
+    height: auto;
+    border-radius: 16px;
+}
+
+.tela2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #c5c5c5;
+}
+
+.setas{
+    display: flex;
+    gap: 300px;
+    color: #000000;          
+    text-decoration: none;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    margin: 0 10px;
 }
