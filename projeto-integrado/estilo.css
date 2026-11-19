@@ -1,105 +1,162 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* --- Estilo para a primeira tela --- */
+
 .tela1 {
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+        linear-gradient(135deg, rgba(3, 12, 28, 0.88), rgba(6, 24, 48, 0.85)),
+        url('imgs/fundo_tech.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Card vertical centralizado */
+.card-glass {
+    width: 440px;
+    padding: 50px 30px;
+    border-radius: 24px;
+    background: rgba(6, 18, 36, 0.65);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.tela1 h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
+.destaque-ciano {
+    color: #00e5ff;
+}
+
+.destaque-laranja {
+    color: #ff5722;
+}
+
+.container1 {
     display: flex;
     flex-direction: column;
-    align-items: start;   
-    min-height: 50vh;      
-    background-color: #BFDDF3;
-    padding: 20px;
-    gap: 50px;
+    align-items: center;
+    gap: 45px;
+}
+
+.interatividade1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.interatividade1 h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
 }
 
 .tela1 img {
-    width: 200px;
+    width: 100%;
+    max-width: 340px;
     height: auto;
-    border-radius: 16px;
+    filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.45));
 }
 
-.container1{
-    display: flex;
-    font-size: 1.25rem;
-}
-
-.interatividade1{
-    gap: 100px;
-}
-
-.interatividade1 h3{
-    font-weight: 500;
-}
-
-.vazio{
-    height: 20px;
-}
-
-.botao1{
+/* Botão ciano neon igual ao da imagem */
+.botao1 {
     display: inline-block;
-    background-color: #0b3954;
-    color: #ffffff;
+    background-color: #00e5ff;
+    color: #030712;
     text-decoration: none; 
-    padding: 14px 14px; 
-    border-radius: 8px;
+    padding: 16px 46px; 
+    border-radius: 12px;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 700;
     white-space: nowrap;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.55);
+    transition: all 0.3s ease;
 }
 
-.botao1:hover{
-    background-color: #134e70;
+.botao1:hover {
+    background-color: #ffffff;
+    color: #030712;
+    box-shadow: 0 0 32px rgba(0, 229, 255, 0.85);
+    transform: translateY(-2px);
 }
 
-/* Estilo para a segunda tela */
+/* --- Estilo para a segunda tela --- */
 
 .tela2 img {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
     border-radius: 16px;
 }
 
-.tela2{
+.tela2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px;
-    background-color: #c5c5c5;
+    padding: 60px 20px;
+    background-color: #BFDDF3;
 }
 
-.setas{
+.tela2 p {
+    max-width: 700px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.setas {
     display: flex;
-    gap: 300px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
     color: #000000;          
     text-decoration: none;
     font-size: 1.5rem; 
     font-weight: bold;
-    margin: 0 10px;
+    cursor: pointer;
 }
 
-/* Estilo para a terceira tela */
+/* --- Estilo para a terceira tela --- */
 
 .tela3 img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     border-radius: 16px;
 }
 
-.tela3{
-    
+.tela3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 20px;
-    padding: 20px;
-    background-color: #BFDDF3;
+    padding: 60px 20px;
+    background-color: #ececec;
 }
 
-.textos{
+.textos {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
