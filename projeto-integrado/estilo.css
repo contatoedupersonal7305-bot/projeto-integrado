@@ -30,8 +30,7 @@ html {
 
 /* Card de vidro aplicado em todas as seções */
 .card-glass {
-    width: 100%;
-    max-width: 440px;
+    width: 100vw;
     padding: 45px 30px;
     border-radius: 24px;
     background: rgba(6, 18, 36, 0.68);
@@ -230,4 +229,150 @@ html {
     background: rgba(0, 229, 255, 0.12);
     box-shadow: 0 0 18px rgba(0, 229, 255, 0.3);
     transform: translateY(-2px);
+}
+
+.texto-invisivel{
+    display: none;
+}
+
+@media (min-width: 1440px) {
+    .card-glass {
+        width: 85vw;
+        min-height: 85vh;
+        justify-content: center;
+        gap: 1px;
+        padding: 40px 50px;
+    }
+
+    .card-glass h1,
+    .card-glass h2 {
+        font-size: 4rem;
+    }
+    .textos p{
+        font-size: 2rem;
+    }
+    .card-glass h3 {
+        font-size: 1.8rem;
+        line-height: 1.45;
+        width: 500px;
+    }
+    .tela1 .card-glass{
+        gap: 20px;
+    }
+    .botao1{
+        display: flex;
+        height: 100px;
+        width: 400px;
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .tela1 .card-glass img{
+        height: 300px;
+        width: 100%;
+    }
+    .tela1 h1 {
+        margin-bottom: 0;
+    }
+
+    .container1 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .interatividade1 {
+        align-items: flex-start;
+        gap: 50px;
+        max-width: 65%;
+    }
+
+    .container1 img {
+        max-width: 340px;
+        height: auto;
+    }
+
+    /* --- Tela 2: fonte maior e setas mais afastadas --- */
+    .tela2 img {
+        max-width: 480px;
+        height: auto;
+    }
+
+    .tela2 p {
+        font-size: 1.25rem;
+        line-height: 1.65;
+        max-width: 920px;
+    }
+
+    .tela2 .setas {
+        max-width: 720px;
+        font-size: 2.4rem;
+    }
+
+    /* --- Tela 3: imagem maior, fonte maior e botão largo --- */
+    .tela3 img {
+        max-width: 340px;
+        height: auto;
+    }
+
+    .tela3 p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        max-width: 820px;
+    }
+
+    .tela3 .botao1 {
+        width: 100%;
+        max-width: 920px;
+        padding: 20px 32px;
+        font-size: 1.2rem;
+    }
+
+    /* --- Tela 4: logo maior em cima + caixas e letras maiores --- */
+    .tela4 .card-glass {
+        justify-content: flex-start;
+        padding-top: 36px;
+        gap: 24px;
+    }
+
+    .tela4 h2 {
+        font-size: 3.6rem;
+        letter-spacing: 2px;
+    }
+
+    .tela4 .subtitulo-contato {
+        font-size: 1.15rem;
+    }
+
+    .tela4 .lista-contatos {
+        gap: 18px;
+        max-width: 980px;
+    }
+
+    .tela4 .item-contato {
+        min-height: 96px;
+        justify-content: center;
+        padding: 22px 28px;
+        gap: 6px;
+    }
+
+    .tela4 .tipo-contato {
+        font-size: 1rem;
+    }
+
+    .tela4 .valor-contato {
+        font-size: 1.45rem;
+    }
+
+    .texto-invisivel {
+        display: block;
+    }
+
+    .texto_visivel {
+        display: none;
+    }
 }
