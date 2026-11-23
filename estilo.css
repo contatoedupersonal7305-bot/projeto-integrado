@@ -13,9 +13,9 @@ html {
 /* --- Estilo unificado para todas as telas --- */
 
 .tela1, .tela2, .tela3, .tela4 {
-    min-height: 100vh;
+    min-height: 100svh;
     scroll-snap-align: start;
-    padding: 40px 20px;
+    padding: 16px;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -28,11 +28,49 @@ html {
     background-repeat: no-repeat;
 }
 
-/* Card de vidro aplicado em todas as seções */
+/* --- Ajuste exato da Tela 1 para caber no iPhone SE (375x667) --- */
+
+.tela1 {
+    height: 100svh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 14px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.botao_link {
+    display: inline-block;
+    color: white;
+    text-decoration: none; 
+    padding: 6px 10px; 
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.botao_link:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #00e5ff;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.65);
+}
+
+/* Card de vidro */
 .card-glass {
-    width: 100vw;
-    padding: 45px 30px;
-    border-radius: 24px;
+    width: 100%;
+    padding: 32px 20px;
+    border-radius: 22px;
     background: rgba(6, 18, 36, 0.68);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(0, 229, 255, 0.35);
@@ -41,7 +79,16 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
+}
+
+/* Card da Tela 1 ocupa exatamente o espaço restante abaixo do header */
+.tela1 .card-glass {
+    flex: 1;
+    min-height: 0;
+    justify-content: space-evenly;
+    padding: 18px 16px;
+    gap: 12px;
 }
 
 .destaque-ciano {
@@ -52,41 +99,45 @@ html {
     color: #ff5722;
 }
 
-/* --- Tela 1 --- */
+/* --- Conteúdo Tela 1 (Mobile / iPhone SE) --- */
 
 .tela1 h1 {
-    font-size: 2rem;
+    font-size: 1.65rem;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 45px;
+    justify-content: space-evenly;
+    width: 100%;
+    flex: 1;
+    gap: 14px;
 }
 
 .interatividade1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 16px;
 }
 
 .interatividade1 h3 {
-    font-size: 2.2rem;
+    font-size: 1.65rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.18;
     color: #ffffff;
 }
 
 .tela1 img {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
-    filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.45));
+    width: auto;
+    max-width: 240px;
+    max-height: 155px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 16px rgba(0, 229, 255, 0.45));
 }
 
 .botao1 {
@@ -94,19 +145,19 @@ html {
     background-color: #00e5ff;
     color: #030712;
     text-decoration: none; 
-    padding: 16px 40px; 
+    padding: 12px 30px; 
     border-radius: 12px;
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     font-weight: 700;
     white-space: nowrap;
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.55);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.55);
     transition: all 0.3s ease;
 }
 
 .botao1:hover {
     background-color: #ffffff;
     color: #030712;
-    box-shadow: 0 0 32px rgba(0, 229, 255, 0.85);
+    box-shadow: 0 0 28px rgba(0, 229, 255, 0.85);
     transform: translateY(-2px);
 }
 
@@ -114,7 +165,7 @@ html {
 
 .tela2 img {
     width: 100%;
-    max-width: 350px;
+    max-width: 320px;
     height: auto;
     border-radius: 16px;
     border: 1px solid rgba(0, 229, 255, 0.3);
@@ -122,28 +173,32 @@ html {
 }
 
 .tela2 h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
 .tela2 p {
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #cbd5e1;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .setas {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 320px;
-    color: #00e5ff;          
-    text-decoration: none;
+    max-width: 300px;
     font-size: 1.8rem; 
     font-weight: bold;
+}
+
+.setas a {
+    color: #00e5ff;
+    text-decoration: none;
     cursor: pointer;
+    transition: text-shadow 0.3s ease;
 }
 
 .setas a:hover {
@@ -154,7 +209,7 @@ html {
 
 .tela3 img {
     width: 100%;
-    max-width: 200px;
+    max-width: 180px;
     height: auto;
     border-radius: 16px;
     border: 1px solid rgba(0, 229, 255, 0.3);
@@ -162,7 +217,7 @@ html {
 }
 
 .tela3 h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -171,30 +226,30 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     color: #cbd5e1;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* --- Tela 4 (Cartão de Contato) --- */
 
 .tela4 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
 .subtitulo-contato {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #cbd5e1;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .lista-contatos {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
 }
 
 .item-contato {
@@ -202,7 +257,7 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    padding: 16px 20px;
+    padding: 14px 18px;
     border-radius: 12px;
     background: rgba(3, 10, 22, 0.8);
     border: 1px solid rgba(0, 229, 255, 0.25);
@@ -211,7 +266,7 @@ html {
 }
 
 .tipo-contato {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #00e5ff;
@@ -219,7 +274,7 @@ html {
 }
 
 .valor-contato {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: #ffffff;
     font-weight: 600;
 }
@@ -231,35 +286,57 @@ html {
     transform: translateY(-2px);
 }
 
-.texto-invisivel{
+.texto-invisivel {
     display: none;
 }
 
+/* --- Desktop (1440px+) --- */
+
 @media (min-width: 1440px) {
+    .tela1 {
+        height: 100vh;
+        justify-content: center;
+        padding: 25px 20px;
+        gap: 24px;
+    }
+
+    .botao_link {
+        font-size: 1.15rem;
+        padding: 10px 18px;
+    }
+
     .card-glass {
         width: 85vw;
-        min-height: 85vh;
+        min-height: 82vh;
         justify-content: center;
         gap: 1px;
         padding: 40px 50px;
+    }
+
+    .tela1 .card-glass {
+        flex: initial;
+        min-height: 82vh;
+        justify-content: center;
+        padding: 40px 50px;
+        gap: 20px;
     }
 
     .card-glass h1,
     .card-glass h2 {
         font-size: 4rem;
     }
-    .textos p{
+
+    .textos p {
         font-size: 2rem;
     }
+
     .card-glass h3 {
         font-size: 1.8rem;
         line-height: 1.45;
         width: 500px;
     }
-    .tela1 .card-glass{
-        gap: 20px;
-    }
-    .botao1{
+
+    .botao1 {
         display: flex;
         height: 100px;
         width: 400px;
@@ -268,12 +345,12 @@ html {
         justify-content: center;
         align-items: center;
     }
-    .tela1 .card-glass img{
+
+    .tela1 .card-glass img {
+        max-width: 340px;
+        max-height: none;
         height: 300px;
-        width: 100%;
-    }
-    .tela1 h1 {
-        margin-bottom: 0;
+        width: auto;
     }
 
     .container1 {
@@ -281,6 +358,7 @@ html {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        flex: initial;
         gap: 40px;
         text-align: left;
     }
@@ -291,12 +369,7 @@ html {
         max-width: 65%;
     }
 
-    .container1 img {
-        max-width: 340px;
-        height: auto;
-    }
-
-    /* --- Tela 2: fonte maior e setas mais afastadas --- */
+    /* --- Tela 2 --- */
     .tela2 img {
         max-width: 480px;
         height: auto;
@@ -313,7 +386,7 @@ html {
         font-size: 2.4rem;
     }
 
-    /* --- Tela 3: imagem maior, fonte maior e botão largo --- */
+    /* --- Tela 3 --- */
     .tela3 img {
         max-width: 340px;
         height: auto;
@@ -332,7 +405,7 @@ html {
         font-size: 1.2rem;
     }
 
-    /* --- Tela 4: logo maior em cima + caixas e letras maiores --- */
+    /* --- Tela 4 --- */
     .tela4 .card-glass {
         justify-content: flex-start;
         padding-top: 36px;
