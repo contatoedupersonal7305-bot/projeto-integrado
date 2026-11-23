@@ -163,6 +163,8 @@ header {
 
 /* --- Tela 2 --- */
 
+/* --- Tela 2 --- */
+
 .tela2 img {
     width: 100%;
     max-width: 320px;
@@ -170,6 +172,7 @@ header {
     border-radius: 16px;
     border: 1px solid rgba(0, 229, 255, 0.3);
     box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    transition: opacity 0.2s ease;
 }
 
 .tela2 h1 {
@@ -190,19 +193,22 @@ header {
     justify-content: space-between;
     width: 100%;
     max-width: 300px;
-    font-size: 1.8rem; 
-    font-weight: bold;
 }
 
-.setas a {
+.btn-seta {
+    background: transparent;
+    border: none;
     color: #00e5ff;
-    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: text-shadow 0.3s ease;
+    padding: 4px 12px;
+    transition: text-shadow 0.3s ease, transform 0.2s ease;
 }
 
-.setas a:hover {
+.btn-seta:hover {
     text-shadow: 0 0 12px #00e5ff;
+    transform: scale(1.15);
 }
 
 /* --- Tela 3 --- */

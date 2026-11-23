@@ -28,12 +28,12 @@
 
     <section class="tela2" id="tela2">
         <div class="card-glass">
-            <img src="imgs/tela_principal.png" alt="Tela Principal">
-            <h1><span class="destaque-ciano">TELA</span> PRINCIPAL</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim optio, sequi quis quo id, fugiat est cupiditate doloremque molestiae commodi consectetur iste laborum? Qui sint voluptatem animi expedita consectetur cum.</p>
+            <img id="carrossel-img" src="imgs/tela_3.png" alt="Tela 3">
+            <h1 id="carrossel-titulo"><span class="destaque-ciano">TELA</span> 3</h1>
+            <p id="carrossel-desc">Descrição da Tela 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim optio, sequi quis quo id, fugiat est cupiditate doloremque.</p>
             <div class="setas">
-                <div class="flecha-esq"><a href="#tela2"><span class="flechas"><</span></a></div>
-                <div class="flecha-dir"><a href="#tela2"><span class="flechas">></span></a></div>
+                <button type="button" id="btn-anterior" class="btn-seta"><</button>
+                <button type="button" id="btn-proximo" class="btn-seta">></button>
             </div>
         </div>
     </section>
@@ -72,5 +72,66 @@
             </div>
         </div>
     </section>
+    <script>
+        const slides = [
+            {
+                imagem: "imgs/tela3.png",
+                tituloCiano: "TELA",
+                tituloBranco: " 1",
+                descricao: "Acompanhe o faturamento, o ticket médio e os indicadores mais importantes da sua operação em tempo real, com gráficos intuitivos para decisões rápidas."
+            },
+            {
+                imagem: "imgs/tela4.png", 
+                tituloCiano: "TELA",
+                tituloBranco: " 2",
+                descricao: "Gerencie seu catálogo completo com facilidade, controlando preços, variações, insumos e níveis de estoque de forma automática e sem planilhas."
+            },
+            {
+                imagem: "imgs/tela2.png", 
+                tituloCiano: "TELA",
+                tituloBranco: " 3",
+                descricao: "Centralize todos os pedidos recebidos em uma fila organizada, agilizando o preparo, evitando erros na produção e garantindo mais velocidade no atendimento."
+            },
+            {
+                imagem: "imgs/tela1.png",
+                tituloCiano: "TELA",
+                tituloBranco: " 4",
+                descricao: "Monitore cada etapa do envio até a porta do cliente, organizando rotas, prazos e status de entrega para garantir pontualidade e satisfação total."
+            }
+        ];
+
+        let indiceAtual = 0;
+
+        const imgEl = document.getElementById("carrossel-img");
+        const tituloEl = document.getElementById("carrossel-titulo");
+        const descEl = document.getElementById("carrossel-desc");
+        const btnAnterior = document.getElementById("btn-anterior");
+        const btnProximo = document.getElementById("btn-proximo");
+
+        function atualizarCarrossel() {
+            const slide = slides[indiceAtual];
+            imgEl.style.opacity = 0;
+
+            setTimeout(() => {
+                imgEl.src = slide.imagem;
+                imgEl.alt = slide.tituloCiano + slide.tituloBranco;
+                tituloEl.innerHTML = `<span class="destaque-ciano">${slide.tituloCiano}</span>${slide.tituloBranco}`;
+                descEl.textContent = slide.descricao;
+                imgEl.style.opacity = 1;
+            }, 150);
+        }
+
+        btnProximo.addEventListener("click", () => {
+            indiceAtual = (indiceAtual + 1) % slides.length;
+            atualizarCarrossel();
+        });
+
+        btnAnterior.addEventListener("click", () => {
+            indiceAtual = (indiceAtual - 1 + slides.length) % slides.length;
+            atualizarCarrossel();
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
