@@ -296,66 +296,71 @@ header {
     display: none;
 }
 
-/* --- Desktop (1440px+) --- */
+/* --- Desktop (1920px+) --- */
 
-@media (min-width: 1440px) {
+@media (min-width: 1920px) {
     .tela1 {
         height: 100vh;
         justify-content: center;
-        padding: 25px 20px;
+        padding: 35px 40px;
+        gap: 32px;
+    }
+
+    header {
         gap: 24px;
     }
 
     .botao_link {
-        font-size: 1.15rem;
-        padding: 10px 18px;
+        font-size: 1.35rem;
+        padding: 12px 24px;
     }
 
     .card-glass {
-        width: 85vw;
+        width: 80vw;
+        max-width: 1600px;
         min-height: 82vh;
         justify-content: center;
-        gap: 1px;
-        padding: 40px 50px;
+        gap: 24px;
+        padding: 55px 75px;
     }
 
     .tela1 .card-glass {
         flex: initial;
         min-height: 82vh;
         justify-content: center;
-        padding: 40px 50px;
-        gap: 20px;
+        padding: 55px 75px;
+        gap: 32px;
     }
 
     .card-glass h1,
     .card-glass h2 {
-        font-size: 4rem;
+        font-size: 4.8rem;
     }
 
     .textos p {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .card-glass h3 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         line-height: 1.45;
-        width: 500px;
+        width: 720px;
     }
 
     .botao1 {
         display: flex;
-        height: 100px;
-        width: 400px;
-        font-size: 2rem;
+        height: 110px;
+        width: 460px;
+        font-size: 2.2rem;
         text-align: center;
         justify-content: center;
         align-items: center;
     }
 
     .tela1 .card-glass img {
-        max-width: 340px;
+        max-width: 460px;
         max-height: none;
-        height: 300px;
+        height: 380px;
         width: auto;
     }
 
@@ -365,86 +370,89 @@ header {
         align-items: center;
         width: 100%;
         flex: initial;
-        gap: 40px;
+        gap: 60px;
         text-align: left;
     }
 
     .interatividade1 {
         align-items: flex-start;
-        gap: 50px;
+        gap: 55px;
         max-width: 65%;
     }
 
     /* --- Tela 2 --- */
     .tela2 img {
-        max-width: 480px;
+        max-width: 620px;
         height: auto;
     }
 
     .tela2 p {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         line-height: 1.65;
-        max-width: 920px;
+        max-width: 1150px;
     }
 
     .tela2 .setas {
-        max-width: 720px;
-        font-size: 2.4rem;
+        max-width: 920px;
+    }
+
+    .tela2 .btn-seta {
+        font-size: 3rem;
     }
 
     /* --- Tela 3 --- */
     .tela3 img {
-        max-width: 340px;
+        max-width: 900px;
         height: auto;
     }
 
     .tela3 p {
-        font-size: 1.3rem;
+        font-size: 1.55rem;
         line-height: 1.6;
-        max-width: 820px;
+        max-width: 1050px;
     }
 
     .tela3 .botao1 {
         width: 100%;
-        max-width: 920px;
-        padding: 20px 32px;
-        font-size: 1.2rem;
+        max-width: 1050px;
+        padding: 24px 40px;
+        font-size: 1.45rem;
     }
 
     /* --- Tela 4 --- */
     .tela4 .card-glass {
-        justify-content: flex-start;
-        padding-top: 36px;
-        gap: 24px;
+        justify-content: center;
+        padding: 50px 75px;
+        gap: 30px;
     }
 
     .tela4 h2 {
-        font-size: 3.6rem;
+        font-size: 4.4rem;
         letter-spacing: 2px;
     }
 
     .tela4 .subtitulo-contato {
-        font-size: 1.15rem;
+        font-size: 1.45rem;
     }
 
     .tela4 .lista-contatos {
-        gap: 18px;
-        max-width: 980px;
+        gap: 24px;
+        max-width: 1200px;
     }
 
     .tela4 .item-contato {
-        min-height: 96px;
+        min-height: 115px;
         justify-content: center;
-        padding: 22px 28px;
-        gap: 6px;
+        padding: 26px 36px;
+        gap: 8px;
     }
 
     .tela4 .tipo-contato {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
 
     .tela4 .valor-contato {
-        font-size: 1.45rem;
+        font-size: 1.75rem;
     }
 
     .texto-invisivel {
